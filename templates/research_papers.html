@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}HDCC105 AI Research Papers{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/research_papers.css') }}">
+
+<div class="header">
+  <h1>AI RESEARCH PAPERS</h1>
+  <p>
+    we wrote research papers on various topics of artificial intelligence.
+    read them Here
+  </p>
+</div>
+
+<main>
+  <section class="row">
+    <div class="preview" >
+      <img src="{{ url_for('static', filename='media/research_papers/ecology.png') }}" />
+    </div>
+    <div>
+      trees
+    </div>
+  </section>
+</main>
+{% endblock %}

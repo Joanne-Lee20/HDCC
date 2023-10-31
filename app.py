@@ -10,5 +10,9 @@ def index():
 def bestpractices():
     return render_template("bestpractices.html")
 
+@app.route('/research_papers')
+def research_papers():
+    return render_template("research_papers.html")
+
 if __name__ == '__main__':
     app.run(debug=True)

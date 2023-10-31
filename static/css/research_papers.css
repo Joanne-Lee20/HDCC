@@ -1,0 +1,26 @@
+section.row {
+  display: flex;
+}
+
+section.row > div {
+  flex: 2;
+}
+
+div.preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.preview img {
+  width: 50%;
+  max-width: 50%;
+}
+
+div.header {
+  padding: 18px;
+}
+
+div.header h1 {
+  margin-bottom: 0;
+}
