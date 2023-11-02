@@ -14,13 +14,21 @@
 </div>
 
 <main>
-  <section class="row">
-    <div class="preview" >
-      <img src="{{ url_for('static', filename='media/research_papers/ecology.png') }}" />
-    </div>
-    <div>
-      trees
-    </div>
-  </section>
+  {% for paper in papers %}
+    <section class="row">
+      <div class="preview">
+        <img src="{{ url_for('static', filename='media/research_papers/' + paper[0] + '.png') }}" />
+        <img src="{{ url_for('static', filename='media/research_papers/' + paper[0] + '-1.png') }}" />
+        <img src="{{ url_for('static', filename='media/research_papers/' + paper[0] + '-2.png') }}" />
+      </div>
+      <div class="info">
+        <h2>{{ paper[1] }}</h2>
+        <i>{{ paper[2] }}</i>
+        <p>
+          {{ paper[3] }}
+        </p>
+      </div>
+    </section>
+  {% endfor %}
 </main>
 {% endblock %}
