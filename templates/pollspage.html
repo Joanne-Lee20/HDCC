@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polls Page</title>
+    <style>
+        .poll-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .option {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poll-container">
+        <h2>Do you support the use of AI in the classroom?</h2>
+        <div class="option">
+            <input type="radio" id="option1" name="color" value="option1">
+            <label for="option1">Yes</label>
+        </div>
+        <div class="option">
+            <input type="radio" id="option2" name="color" value="option2">
+            <label for="option2">No</label>
+        </div>
+        <button onclick="submitVote()">Submit Vote</button>
+    </div>
+
+    <script>
+        function submitVote() {
+            var selectedOption = document.querySelector('input[name="color"]:checked');
+            if (selectedOption) {
+                alert('You voted for ' + selectedOption.labels[0].innerText);
+                // Here you can send the vote data to the server using AJAX if needed
+            } else {
+                alert('Please select an option before submitting your vote.');
+            }
+        }
+    </script>
+</body>
+</html>
+{% endblock %}

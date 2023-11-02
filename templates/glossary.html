@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block title %}AI Glossary{% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Glossary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            color: #ff7f50; /* Pastel orange */
+        }
+
+        p {
+            color: #add8e6; /* Pastel blue */
+        }
+
+        a {
+            color: #9370db; /* Pastel purple */
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #20b2aa; /* Light sea green */
+        }
+
+        /* Smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AI Glossary</h1>
+
+    <h2>Active Learning:</h2>
+    <p>Machine learning system interacting with a human to improve its accuracy. <a href="#">Click here for more information.</a></p>
+
+    <!-- Add more terms and descriptions following the same pattern -->
+
+    <h2>Word-level Generative Models:</h2>
+    <p>Models generating text at the word level, creating coherent sentences and paragraphs.</p>
+
+    <h2>Zero-Shot Learning:</h2>
+    <p>Model's ability to recognize or generate examples of classes it has never seen during training.</p>
+
+    <!-- You can continue adding more terms and descriptions here -->
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+{% endblock %}
