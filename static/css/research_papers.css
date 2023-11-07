@@ -65,3 +65,11 @@ div.header {
 div.header h1 {
   margin-bottom: 0;
 }
+
+div.info {
+  display: flex;
+  flex-direction: column;
+}
+div.info p {
+  flex: 1;
+}

@@ -14,6 +14,14 @@ def about():
 def bestpractices():
     return render_template("bestpractices.html")
 
+@app.route('/glossary')
+def glossary():
+    return render_template("glossary.html")
+
+@app.route('/polls')
+def polls():
+    return render_template("pollspage.html")
+
 research_papers_content = [
     ("ecology",  "AI + Ecology",           "author names here?", "love trees. some summary here"),
     ("culture",  "AI's Harmonious Fusion", "author names here?", "love words. some summary here"),
