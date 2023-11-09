@@ -1,21 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
 body {
-    font-family: Arial, sans-serif;
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    color: black;
     margin: 0;
     padding: 0;
     min-height: 85vh;
 }
 
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
+h2 {
+    color:black;
+}
+.footerheader {
+    color: #F8F3F2;
+}
 header {
-    background-color: #333;
+    color: #F8F3F2;
+    background-color: black;
     text-align: center;
     padding: 10px;
 }
 
 nav {
-    background-color: #444;
+    background-color: #F8F3F2;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
 nav ul {
@@ -31,22 +42,63 @@ nav li {
 
 a {
     text-decoration: none;
-    color: white;
+    color: #F8F3F2;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    padding: 1rem 0;
+    margin: 0.5rem;
+    font-size: 15px;
+    background-color: (18, 12, 20);
+    color: #F8F3F2;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 0 black;
+    transition: all 0.2s;
+}
+
+.navbutton1 {
+    background-color: #ffa7a6;
+}
+.navbutton2 {
+    background-color: #ffdca6;
+}
+.navbutton3 {
+    background-color: #97d8a0;
+}
+.navbutton4 {
+    background-color: #78c8d8;
+}
+.navbutton5 {
+    background-color: #e4b0f4;
+}
+.navbutton6 {
+    background-color: #ffa7a6;
+}
+
+button:hover {
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transform: translate(-0.4rem, -0.4rem);
+}
+button:active {
+    box-shadow: 0 0 0 black;
+    transform: translate(0, 0);
 }
 
 main {
     padding: 20px;
     /* text-align: center; */
     min-height: 90%;
-    background-color: #39b54a;
-}
-
-a:hover {
-    text-decoration: underline;
+    background-color: #F8F3F2;
 }
 
 footer {
-    background-color: #333;
+    background-color: black;
     padding: 20px 0;
     text-align: center;
 }
@@ -75,5 +127,5 @@ html {
 body {
     overflow: auto;
     height: 100%;
-    background-color: #333;
+    background-color: #F8F3F2;
 }

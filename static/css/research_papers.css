@@ -66,6 +66,12 @@ div.header h1 {
   margin-bottom: 0;
 }
 
+div.header {
+  background-color: black;
+  color: #F8F3F2;
+  text-align: center;
+}
+
 div.info {
   display: flex;
   flex-direction: column;
