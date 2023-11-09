@@ -9,15 +9,15 @@
   <body>
     <nav>
       <ul>
-        <li><a href="{{ url_for('index') }}"><button class="navbutton1">Home</button></a></li>
-        <li><a href="{{ url_for('about') }}"><button class="navbutton2">About</button></a></li>
-        <li><a href="{{ url_for('bestpractices') }}"><button class="navbutton3">Best Practices</button></a></li>
-        <li><a href="{{ url_for('research_papers') }}"><button class="navbutton4">Research Reports</button></a></li>
-        <li><a href="{{ url_for('polls') }}"><button class="navbutton5">Polls</button></a></li>
-        <li><a href="{{ url_for('glossary') }}"><button class="navbutton6">AI Glossary</button></a></li>
-        <!-- <li><a href="creative_workshops.html">Creative Workshops</a></li>
-        <li><a href="podcast_interviews.html">Podcast Interviews</a></li>
-        <li><a href="content.html">Content</a></li> -->
+        <li><a href="/"><button class="navbutton1">Home</button></a></li>
+        <li><a href="/about"><button class="navbutton2">About</button></a></li>
+        <li><a href="/research_papers"><button class="navbutton3">Research Reports</button></a></li>
+        <li><a href="/workshop_projects"><button class="navbutton4">Creative Projects</button></a></li>
+        <li><a href="/glossary"><button class="navbutton5">AI Glossary</button></a></li>
+        <li><a href="/bestpractices"><button class="navbutton1">AI Best Practices</button></a></li>
+        <li><a href="/resources"><button class="navbutton2">Resources</button></a></li>
+        <li><a href="/syllabus"><button class="navbutton3">AI Course Syllabus</button></a></li>
+        <li><a href="/polls"><button class="navbutton4">Polls</button></a></li>
       </ul>
     </nav>
     {% block body %}

@@ -31,5 +31,17 @@ research_papers_content = [
 def research_papers():
     return render_template("research_papers.html", papers = research_papers_content)
 
+@app.route('/resources')
+def resources():
+    return render_template("resources.html")
+
+@app.route('/syllabus')
+def syllabus():
+    return render_template("syllabus.html")
+
+@app.route('/workshop_projects')
+def workshop_projects():
+    return render_template("workshop_projects.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
