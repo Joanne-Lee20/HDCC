@@ -24,7 +24,7 @@ header {
 }
 
 nav {
-    background-color: #F8F3F2;
+    background-color: #97d8a0;
     text-align: center;
     padding: 20px;
 }
@@ -40,54 +40,12 @@ nav li {
     margin: 0 10px;
 }
 
-a {
+nav a {
     text-decoration: none;
-    color: #F8F3F2;
+    color: black;
 }
-
-button {
-    font-family: 'Poppins', sans-serif;
-    display: inline-block;
-    padding: 1rem 0;
-    margin: 0.5rem;
-    font-size: 15px;
-    background-color: (18, 12, 20);
-    color: #F8F3F2;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 0 black;
-    transition: all 0.2s;
-}
-
-.navbutton1 {
-    background-color: #ffa7a6;
-}
-.navbutton2 {
-    background-color: #ffdca6;
-}
-.navbutton3 {
-    background-color: #97d8a0;
-}
-.navbutton4 {
-    background-color: #78c8d8;
-}
-.navbutton5 {
-    background-color: #e4b0f4;
-}
-.navbutton6 {
-    background-color: #ffa7a6;
-}
-
-button:hover {
-    box-shadow: 0.4rem 0.4rem 0 black;
-    transform: translate(-0.4rem, -0.4rem);
-}
-button:active {
-    box-shadow: 0 0 0 black;
-    transform: translate(0, 0);
+nav a:hover {
+    color: white;
 }
 
 main {
