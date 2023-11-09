@@ -18,6 +18,10 @@ def bestpractices():
 def glossary():
     return render_template("glossary.html")
 
+@app.route('/podcasts')
+def podcasts():
+    return render_template("podcasts.html")
+
 @app.route('/polls')
 def polls():
     return render_template("pollspage.html")
