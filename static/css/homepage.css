@@ -59,10 +59,10 @@ img {
 button {
     font-family: 'Poppins', sans-serif;
     display: block;
+    width: 15rem;
+    padding: 1.25rem 0;
+    margin: 0.5rem;
     font-size: 20px;
-    width: 250px;
-    height: 50px;
-    margin: 20px;
     background-color: (18, 12, 20);
     color: white;
     font-weight: bold;
@@ -77,6 +77,9 @@ button {
 }
 .button1{
   background-color: #ffa7a6;
+
+#button1 {
+    background-color: #39b54a;
 }
 .button2{
   background-color: #ffdca6;
@@ -86,6 +89,20 @@ button {
   background-color: #78c8d8;
 }.button5{
   background-color: #e4b0f4;
+#button2 {
+    background-color: #ffa7a6;
+}
+#button3 {
+    background-color: #ffdca6;
+}
+#button4 {
+    background-color: #e4b0f4;
+}
+#button5 {
+    background-color: #78c8d8;
+}
+#button6 {
+    background-color: #97d8a0;
 }
 
 .button-container a {
