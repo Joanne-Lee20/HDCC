@@ -1,9 +1,18 @@
 .definition-container {
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
     text-align: left;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F3F2;
+    color: black;
+    margin: 0 auto; /* Center the content horizontally */
+    max-width: 4in; /* Set maximum width to 4 inches */
+    padding: 20px; /* Add padding inside the content container */
 }
