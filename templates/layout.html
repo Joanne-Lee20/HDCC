@@ -9,12 +9,12 @@
   <body>
     <nav>
       <ul>
-        <li><a href="{{ url_for('index') }}">Home</a></li>
-        <li><a href="{{ url_for('about') }}">About</a></li>
-        <li><a href="{{ url_for('bestpractices') }}">Best Practices</a></li>
-        <li><a href="{{ url_for('research_papers') }}">Research Reports</a></li>
-        <li><a href="{{ url_for('polls') }}">Polls</a></li>
-        <li><a href="{{ url_for('glossary') }}">AI Glossary</a></li>
+        <li><a href="{{ url_for('index') }}"><button class="navbutton1">Home</button></a></li>
+        <li><a href="{{ url_for('about') }}"><button class="navbutton2">About</button></a></li>
+        <li><a href="{{ url_for('bestpractices') }}"><button class="navbutton3">Best Practices</button></a></li>
+        <li><a href="{{ url_for('research_papers') }}"><button class="navbutton4">Research Reports</button></a></li>
+        <li><a href="{{ url_for('polls') }}"><button class="navbutton5">Polls</button></a></li>
+        <li><a href="{{ url_for('glossary') }}"><button class="navbutton6">AI Glossary</button></a></li>
         <!-- <li><a href="creative_workshops.html">Creative Workshops</a></li>
         <li><a href="podcast_interviews.html">Podcast Interviews</a></li>
         <li><a href="content.html">Content</a></li> -->
@@ -24,6 +24,7 @@
     {% endblock %}
     <script src="script.js"></script>
     <footer class="social-buttons">
+      <h2 class="footerheader">Social</h2>
       <a href="https://www.instagram.com" target="_blank">
         <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram">
       </a>

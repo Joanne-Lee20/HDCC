@@ -14,11 +14,13 @@
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            border: 1px solid #ccc;
             border-radius: 5px;
         }
         .option {
             margin-bottom: 10px;
+        }
+        .submitbutton {
+            background-color: #78c8d8;
         }
     </style>
 </head>
@@ -33,9 +35,8 @@
             <input type="radio" id="option2" name="color" value="option2">
             <label for="option2">No</label>
         </div>
-        <button onclick="submitVote()">Submit Vote</button>
+        <button class="submitbutton" onclick="submitVote()">Submit Vote</button>
     </div>
-
     <script>
         function submitVote() {
             var selectedOption = document.querySelector('input[name="color"]:checked');

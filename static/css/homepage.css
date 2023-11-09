@@ -34,6 +34,10 @@ body {
 }
 
 h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+h2 {
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -61,20 +65,17 @@ button {
     display: block;
     width: 15rem;
     padding: 1.25rem 0;
-    margin: 0.5rem;
+    margin: 1rem;
     font-size: 20px;
     background-color: (18, 12, 20);
     color: white;
     font-weight: bold;
-
     cursor: pointer;
     border: none;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 20px;
-
     box-shadow: 0 0 0 black;
     transition: all 0.2s;
-  
 }
 .button1{
   background-color: #ffa7a6;
@@ -94,8 +95,8 @@ button {
 }
 
 button:hover {
-  box-shadow: 0.4rem 0.4rem 0 black;
-  transform: translate(-0.4rem, -0.4rem);
+  box-shadow: 0.5rem 0.5rem 0 black;
+  transform: translate(-0.5rem, -0.5rem);
 }
 button:active {
   box-shadow: 0 0 0 black;
