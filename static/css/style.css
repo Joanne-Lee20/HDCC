@@ -47,9 +47,15 @@ nav li {
 nav a {
     text-decoration: none;
     color: black;
+    padding: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#97d8a0;
+    border-radius:5px;
 }
 nav a:hover {
-    color: white;
+    color: #F8F3F2;
+    border-color:#F8F3F2;
 }
 
 main {
@@ -60,6 +66,8 @@ main {
 }
 
 footer {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
     background-color: black;
     padding: 20px 0;
     text-align: center;
@@ -91,3 +99,29 @@ body {
     height: 100%;
     background-color: #F8F3F2;
 }
+
+nav a:hover, .selectblink {
+    animation: blink 0.3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: none;
+}
+@keyframes blink {
+    from {opacity:0};
+    to {opacity:1};
+}
+#blink {
+    animation: blink 0.3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: none;
+}
+
+#box2 {
+    display:inline-block;
+    border-width: 2px;
+    border-color: #F8F3F2;
+    border-style: solid;
+    margin: 20px;
+    padding: 5px;
+  }

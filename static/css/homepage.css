@@ -25,7 +25,6 @@ body {
     width: 50%;
     height: 100%;
     background-color: #97d8a0;
-    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,11 +71,10 @@ button {
     margin: 1rem;
     font-size: 20px;
     background-color: (18, 12, 20);
-    color: white;
+    color: #F8F3F2;
     font-weight: bold;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 0 black;
     transition: all 0.2s;
@@ -104,8 +102,23 @@ button {
 button:hover {
   box-shadow: 0.5rem 0.5rem 0 black;
   transform: translate(-0.5rem, -0.5rem);
+  color:black;
 }
 button:active {
   box-shadow: 0 0 0 black;
   transform: translate(0, 0);
+}
+
+#box1 {
+  color: black;
+  background-color:#F8F3F2;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  padding: 70px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  box-shadow: 0.5rem 0.5rem black;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,10 +1,8 @@
 {% extends "layout.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Polls{% endblock %}
 
 {% block body %}
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +22,10 @@
         }
     </style>
 </head>
-<body>
+<header>
+    <h1>Polls Page</h1>
+  </header>
+<main>
     <div class="poll-container">
         <h2>Do you support the use of AI in the classroom?</h2>
         <div class="option">
@@ -48,6 +49,5 @@
             }
         }
     </script>
-</body>
-</html>
+</main>
 {% endblock %}
