@@ -3,11 +3,32 @@
 {% block title %}Learning Resources{% endblock %}
 
 {% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resources.css') }}">
+
 <header>
   <h1>Learning Resources</h1>
 </header>
 
-<main>
-  <p>hi</p>
-</main>
+<div class="container">
+  <main>
+    {% for resrc in resources_content %}
+    <section>
+      <article>
+        <img src="{{ url_for('static', filename='media/resources/placeholder.png') }}" style="height: 80%"/>
+      </article>
+      <article>
+        <h3>{{ resrc[0] }}</h3>
+        <p><b>Author(s):</b> {{ resrc[1] }}</p>
+        <p><b>Description:</b> {{ resrc[2] }}</p>
+        <p><b>Platform/media type:</b> {{ resrc[3] }}</p>
+      </article>
+    </section>
+    {% endfor %}
+  </main>
+
+  <aside>
+    <h2>Filters</h2>
+    <p>Lorem ipsum</p>
+  </aside>
+</div>
 {% endblock %}
