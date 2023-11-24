@@ -35,9 +35,15 @@ research_papers_content = [
 def research_papers():
     return render_template("research_papers.html", papers = research_papers_content)
 
+resources_content = []
+with open("static/resources.txt") as file:
+    lines = file.read()
+    resources_content = [entry.split('\n') for entry in lines.split('\n\n')]
+    resources_content = [entry for entry in resources_content if len(entry) != 1]
+
 @app.route('/resources')
 def resources():
-    return render_template("resources.html")
+    return render_template("resources.html", resources_content = resources_content)
 
 @app.route('/syllabus')
 def syllabus():

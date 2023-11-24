@@ -3,31 +3,43 @@
 {% block title %}Best Practices{% endblock %}
 
 {% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/glossary.css') }}">
+
 <header>
     <h1>Best Practices</h1>
 </header>
+
 <main>
-    <ol>
-        <li><b>Transparency and Disclosure:</b>
-            Ensure students are aware when they are interacting with AI-powered tools. Clearly disclose the use of AI-generated content and its purpose in educational activities.</li>
-        <li><b>Educate Students:</b>
-            Teach students about how generative AI works, its limitations, and potential biases. Promote understanding and critical thinking about the technology.</li>
-        <li><b>Respect Privacy:</b>
-            Protect students' privacy. Avoid collecting unnecessary data, and anonymize any data that is collected. Comply with relevant privacy regulations and obtain necessary permissions.</li>
-        <li><b>Avoid Bias and Discrimination:</b>
-            Be vigilant about biases in AI algorithms. Regularly audit and update the AI systems to mitigate biases, ensuring fair and equal treatment for all students regardless of their background.</li>
-        <li><b>Encourage Creativity and Learning:</b>
-            Use generative AI as a tool to enhance creativity and learning, rather than a replacement for student effort. Encourage students to use AI as a supplement to their learning process.</li>
-        <li><b>Promote Critical Thinking:</b>
-            Guide students to critically evaluate AI-generated content. Encourage them to question sources, authenticity, and credibility of the information they receive from AI systems.</li>
-        <li><b>Avoid Manipulation:</b>
-            Do not use AI to manipulate students' emotions, opinions, or behavior. Avoid creating content that is designed to deceive or coerce students.</li>
-        <li><b>Collaborative Learning:</b>
-            Foster collaborative learning experiences where students can work together and learn from one another, while incorporating AI as a supportive tool in the learning process.</li>
-        <li><b>Regular Evaluation:</b>
-            Regularly assess the effectiveness and impact of AI tools on students’ learning outcomes. Use feedback from both teachers and students to improve the AI systems and their educational applications.</li>
-        <li><b>Professional Development:</b>
-            Provide training and professional development for teachers to understand AI technology, its applications, and the ethical considerations involved. Teachers should be equipped to guide students responsibly in the use of AI.</li>
-    </ol>
+    <article class="definition-container">
+        <h2>Transparency and Disclosure:</h2>
+        <p>Ensure students are aware when they are interacting with AI-powered tools. Clearly disclose the use of AI-generated content and its purpose in educational activities.</p>
+        
+        <h2>Educate Students:</h2>
+        <p>Teach students about how generative AI works, its limitations, and potential biases. Promote understanding and critical thinking about the technology.</p>
+        
+        <h2>Respect Privacy:</h2>
+        <p>Protect students' privacy. Avoid collecting unnecessary data, and anonymize any data that is collected. Comply with relevant privacy regulations and obtain necessary permissions.</p>
+        
+        <h2>Avoid Bias and Discrimination:</h2>
+        <p>Be vigilant about biases in AI algorithms. Regularly audit and update the AI systems to mitigate biases, ensuring fair and equal treatment for all students regardless of their background.</p>
+        
+        <h2>Encourage Creativity and Learning:</h2>
+        <p>Use generative AI as a tool to enhance creativity and learning, rather than a replacement for student effort. Encourage students to use AI as a supplement to their learning process.</p>
+        
+        <h2>Promote Critical Thinking:</h2>
+        <p>Guide students to critically evaluate AI-generated content. Encourage them to question sources, authenticity, and credibility of the information they receive from AI systems.</p>
+        
+        <h2>Avoid Manipulation:</h2>
+        <p>Do not use AI to manipulate students' emotions, opinions, or behavior. Avoid creating content that is designed to deceive or coerce students.</p>
+        
+        <h2>Collaborative Learning:</h2>
+        <p>Foster collaborative learning experiences where students can work together and learn from one another, while incorporating AI as a supportive tool in the learning process.</p>
+        
+        <h2>Regular Evaluation:</h2>
+        <p>Regularly assess the effectiveness and impact of AI tools on students’ learning outcomes. Use feedback from both teachers and students to improve the AI systems and their educational applications.</p>
+        
+        <h2>Professional Development:</h2>
+        <p>Provide training and professional development for teachers to understand AI technology, its applications, and the ethical considerations involved. Teachers should be equipped to guide students responsibly in the use of AI.</p>
+    </article>
 </main>
 {% endblock %}

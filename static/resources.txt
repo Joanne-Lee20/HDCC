@@ -1,0 +1,16 @@
+### Books ###
+
+Artificial Intelligence: A Guide for Thinking Humans
+Melanie Mitchell
+Melanie Mitchell, a renowned AI researcher, presents a thought-provoking exploration of AI, offering insights into its history, challenges, and the misconceptions that often surround it. The book is accessible to both technical and non-technical readers.
+Book
+
+Life 3.0: Being Human in the Age of Artificial Intelligence
+Max Tegmark
+Physicist and AI researcher Max Tegmark delves into the ethical and existential questions posed by the rise of advanced artificial intelligence. The book explores scenarios that could unfold and their implications for humanity.
+Book
+
+Human Compatible: Artificial Intelligence and the Problem of Control
+Stuart Russell
+AI pioneer Stuart Russell addresses the challenge of aligning AI systems with human values to ensure safe and beneficial outcomes. The book explores the concept of "provably beneficial AI" and the need for a framework that allows control over AI systems.
+Book
