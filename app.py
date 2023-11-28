@@ -27,9 +27,15 @@ def polls():
     return render_template("pollspage.html")
 
 research_papers_content = [
-    ("ecology",  "AI + Ecology",           "author names here?", "love trees. some summary here"),
-    ("culture",  "AI's Harmonious Fusion", "author names here?", "love words. some summary here"),
-    ("advocacy", "AI Advocacy",            "author names here?", "love words that are directed towards people. some summary here"),
+    ("ecology",  "AI + Ecology",          
+        "author names here?", "love trees. some summary here",
+        "https://example.com"),
+    ("culture",  "AI's Harmonious Fusion",
+        "author names here?", "love words. some summary here",
+        "https://example.com"),
+    ("advocacy", "AI Advocacy",           
+        "author names here?", "love words that are directed towards people. some summary here",
+        "https://example.com"),
 ]
 @app.route('/research_papers')
 def research_papers():
