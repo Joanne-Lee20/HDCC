@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 2.5rem;
+  padding: 2rem;
+}
+
+section {
+  display: grid;
+  padding-bottom: 2.5rem;
+  grid-template-columns: 1fr 4fr;
+}
+
+aside {
+  background-color: #78c8d8;
+  margin: 1rem 1rem 0 0;
+  padding-left: 1.25rem;
+  max-height: 25rem;
+}

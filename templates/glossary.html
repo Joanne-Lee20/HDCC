@@ -1,51 +1,19 @@
 {% extends "layout.html" %}
 
-{% block title %}AI Glossary{% endblock %}
+{% block title %}Podcast Interviews{% endblock %}
 
-{% block body %}
-<!DOCTYPE html>
-<html lang="en">   
+{% block body %} 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Glossary</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/glossary.css') }}">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #F8F3F2;
-            color: black;
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, h2 {
-            color: black; /* Black */
-        }
-
-        p {
-            color: #393939; /* Gray */
-        }
-
-        a {
-            color: #e4b0f4; /* Pastel purple */
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #97d8a0; /* Light sea green */
-        }
-
-        /* Smooth scrolling effect */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
-
-<body>
+<header>
+    <h1>Glossary</h1>
+  </header>
+<main>
     <div class="definition-container">
-    <h1>AI Glossary</h1>
 
     <h2>Active Learning:</h2>
     <p>Machine learning system interacting with a human to improve its accuracy. <a href="https://www.datarobot.com/blog/active-learning-machine-learning/">Click here for more information.</a></p>
@@ -257,7 +225,5 @@
             });
         });
     </script>
-</body>
-
-</html>
+</main>
 {% endblock %}
