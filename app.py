@@ -18,9 +18,33 @@ def bestpractices():
 def glossary():
     return render_template("glossary.html")
 
+podcasts_content = [
+    ("Professor Brandon Morse",
+        "Does AI hold its own against generative art and digital media? Where might it synergize?"),
+    ("Professor Trevor Muñoz",
+        "What role might AI play in the world of digital humanities and community heritage?"),
+    ("Professor José Calderón",
+        "<i>\"Maybe 'Artful Insincerity.'\"</i>"),
+    ("Dr. Hal Daumé & Dr. Katie Shilton",
+        "description"),
+    ("Dr. John Horty",
+        "description"),
+    ("Dr. Dan Greene",
+        "description"),
+    ("Dr. Marisa Parham",
+        "description"),
+    ("Dr. Jing Liu",
+        "description"),
+    ("Professor Irina Muresanu",
+        "description"),
+    ("Dr. Sheena Erete",
+        "description"),
+    ("Dr. Furong Huang",
+        "description"),
+]
 @app.route('/podcasts')
 def podcasts():
-    return render_template("podcasts.html")
+    return render_template("podcasts.html", episodes = podcasts_content)
 
 @app.route('/polls')
 def polls():

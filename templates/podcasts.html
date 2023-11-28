@@ -3,15 +3,35 @@
 {% block title %}Podcast Interviews{% endblock %}
 
 {% block body %}
-<header>
-  <h1>Podcast Interviews</h1>
-  <div id = "box2">
-    <p>Our podcast series of interviews with 11 experts from the University of Maryland!</p>
-  </div>
-</header>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/podcasts.css') }}">
 
-<main style="text-align: center">
-  <h2>Interviews are currently still being conducted and are not yet available at this time.</h2>
-  <p>Please check back another time to listen! Interviews will be published once they are completed.</p>
-</main>
+<div class="hero">
+  <h1>DCC Presents Cool Title Here.</h1>
+  <p>
+    Conversations with our very own UMD faculty on AI's role in fields from art to education.
+  </p>
+  <span>
+    social links here
+  </span>
+</div>
+
+
+{% for episode in episodes %}
+<section class="row">
+  <div class="info">
+    <span>episode {{ loop.index }}:</span>
+    <h2>{{ episode[0] }}</h2>
+    <p>{{ episode[1]|safe }}</p>
+  </div>
+  <div class="preview">
+    <p>
+      youtube/spotify player here once it gets uploaded? something
+    </p>
+    <span>
+      social links
+    </span>
+  </div>
+</section>
+{% endfor %}
+
 {% endblock %}
