@@ -7,6 +7,9 @@
 
 <header>
   <h1>Learning Resources</h1>
+  <div id="box2">
+    <p>A collection of resources to help further your journey in understanding AI.</p>
+  </div>
 </header>
 
 <div class="container">
@@ -28,7 +31,50 @@
 
   <aside>
     <h2>Filters</h2>
-    <p>Lorem ipsum</p>
+    <p>Platform/media type</p>
+    <input type="checkbox" id="media1" name="media1" value="Book">
+    <label for="media1">Book</label>
+    <br>
+    <input type="checkbox" id="media2" name="media2" value="Online course">
+    <label for="media2">Online course</label>
+    <br>
+    <input type="checkbox" id="media3" name="media3" value="Academic paper or report">
+    <label for="media3">Academic paper or report</label>
+    <br>
+    <input type="checkbox" id="media4" name="media4" value="Video">
+    <label for="media4">Video</label>
+    <br>
+    <input type="checkbox" id="media5" name="media5" value="Podcast">
+    <label for="media5">Podcast</label>
+    <br>
+    <button type="submit" onclick="applyFilters()">Apply filters</button>
   </aside>
 </div>
+
+<script>
+  let applyFilters = () => {
+    let filters = [];
+    let checkboxes = document.getElementsByTagName("input");
+    let sections = document.getElementsByTagName("section");
+
+    // go through checkboxes to figure out what to display
+    for (let checkbox of checkboxes) {
+      if (checkbox.checked) {
+        filters.push(checkbox.value);
+      }
+    }
+
+    // hide or display resources based on filters
+    for (let section of sections) {
+      let mediaType = section.children[1].children[3].innerHTML;
+      mediaType = mediaType.substring(28);
+
+      if (filters.includes(mediaType)) {
+        section.style.display = "grid";
+      } else {
+        section.style.display = "none";
+      }
+    }
+  }
+</script>
 {% endblock %}
