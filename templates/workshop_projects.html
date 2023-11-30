@@ -3,84 +3,90 @@
 {% block title %}Creative Workshop Projects{% endblock %}
 
 {% block body %}
-<header>
-  <h1>Creative Workshop Projects</h1>
-  <div id = "box2">
-    <p>We worked on various projects related to AI during our creative workshops.</p>
-  </div>
-</header>
+  <header>
+    <h1>Creative Workshop Projects</h1>
+    <div id="box2">
+      <p>We worked on various projects related to AI during our creative workshops.</p>
+    </div>
+  </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image and Description Boxes</title>
-    <style>
+  <main>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Image and Description Boxes</title>
+      <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+          font-family: Arial, sans-serif;
+          margin: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
         }
-        .box {
-            width: 300px;
-            margin: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 15px;
-        }
-        h2 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-    </style>
-</head>
-<body>
 
-    <div class="box">
+        .box {
+          width: 300px;
+          margin: 20px;
+          padding: 15px;
+          border: 1px solid #ddd;
+          text-align: center;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+          margin-bottom: 15px;
+        }
+
+        h2 {
+          color: #333;
+        }
+
+        p {
+          color: #666;
+        }
+      </style>
+    </head>
+
+    <body>
+
+      <div class="box">
         <img src="image1.jpg" alt="Image 1">
         <h2>Description 1</h2>
         <p>This is the description for Image 1. It can contain information about the image or any relevant details.</p>
-    </div>
+      </div>
 
-    <div class="box">
+      <div class="box">
         <img src="image2.jpg" alt="Image 2">
         <h2>Description 2</h2>
         <p>This is the description for Image 2. It can contain information about the image or any relevant details.</p>
-    </div>
+      </div>
 
-    <div class="box">
+      <div class="box">
         <img src="image3.jpg" alt="Image 3">
         <h2>Description 3</h2>
         <p>This is the description for Image 3. It can contain information about the image or any relevant details.</p>
-    </div>
+      </div>
 
-    <div class="box">
+      <div class="box">
         <img src="image4.jpg" alt="Image 4">
         <h2>Description 4</h2>
         <p>This is the description for Image 4. It can contain information about the image or any relevant details.</p>
-    </div>
+      </div>
 
-    <div class="box">
+      <div class="box">
         <img src="image5.jpg" alt="Image 5">
         <h2>Description 5</h2>
         <p>This is the description for Image 5. It can contain information about the image or any relevant details.</p>
-    </div>
+      </div>
 
-    <div class="box">
+      <div class="box">
         <img src="image6.jpg" alt="Image 6">
         <h2>Description 6</h2>
         <p>This is the description for Image 6. It can contain information about the image or any relevant details.</p>
-    </div>
+      </div>
 
-</body>
-</main>
+    </body>
+  </main>
 </html>
 {% endblock %}
