@@ -37,10 +37,10 @@ podcasts_content = [
         "description"),
     ("Professor Irina Muresanu",
         "description"),
-    ("Dr. Sheena Erete",
-        "description"),
     ("Dr. Furong Huang",
         "description"),
+    ("Dr. Sheena Erete",
+        "<i>Coming soon...</i>"),
 ]
 @app.route('/podcasts')
 def podcasts():
