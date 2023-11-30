@@ -16,22 +16,24 @@
 </div>
 
 
-{% for episode in episodes %}
-<section class="row">
-  <div class="info">
-    <span>episode {{ loop.index }}:</span>
-    <h2>{{ episode[0] }}</h2>
-    <p>{{ episode[1]|safe }}</p>
-  </div>
-  <div class="preview">
-    <p>
-      youtube/spotify player here once it gets uploaded? something
-    </p>
-    <span>
-      social links
-    </span>
-  </div>
-</section>
-{% endfor %}
+<div>
+  {% for episode in episodes %}
+  <section class="row">
+    <div class="info">
+      <span>episode {{ loop.index }}:</span>
+      <h2>{{ episode[0] }}</h2>
+      <p>{{ episode[1]|safe }}</p>
+    </div>
+    <div class="preview">
+      <p>
+        youtube/spotify player here once it gets uploaded? something
+      </p>
+      <span>
+        social links
+      </span>
+    </div>
+  </section>
+  {% endfor %}
+</div>
 
 {% endblock %}
