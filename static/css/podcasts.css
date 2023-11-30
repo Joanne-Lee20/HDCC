@@ -22,16 +22,12 @@ h2 {
 
 section.row {
   display: flex;
-  margin: 20px auto;
+  margin: 4em 0;
+  margin: 0 auto;
   max-width: 800px;
   align-items: center;
-  padding: 40px 20px;
+  padding: 20px 0;
   gap: 40px;
-  background: linear-gradient(gray, gray) bottom no-repeat;
-  background-size: 50% 1px;
-}
-section.row:last-child {
-  background: none;
 }
 section.row .preview {
   text-align: right;
