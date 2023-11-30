@@ -14,16 +14,18 @@
 
 <div class="container">
   <main>
-    {% for resrc in resources_content %}
-    <section>
-      <article>
-        <img src="{{ url_for('static', filename='media/resources/placeholder.png') }}" style="height: 80%"/>
+    {% for i in range(resources_content|length) %}
+    {% set resrc = resources_content[i] %}
+    <section class="resource-section" id="resrc{{ i }}">
+      <article class="image">
+        <img src="{{ url_for('static', filename='media/resources/placeholder.png') }}" style="height: 85%"/>
       </article>
       <article>
         <h3>{{ resrc[0] }}</h3>
         <p><b>Author(s):</b> {{ resrc[1] }}</p>
         <p><b>Description:</b> {{ resrc[2] }}</p>
         <p><b>Platform/media type:</b> {{ resrc[3] }}</p>
+        <p><b>Topic:</b> {{ resrc[4] }}</p>
       </article>
     </section>
     {% endfor %}
@@ -31,50 +33,35 @@
 
   <aside>
     <h2>Filters</h2>
-    <p>Platform/media type</p>
-    <input type="checkbox" id="media1" name="media1" value="Book">
-    <label for="media1">Book</label>
-    <br>
-    <input type="checkbox" id="media2" name="media2" value="Online course">
-    <label for="media2">Online course</label>
-    <br>
-    <input type="checkbox" id="media3" name="media3" value="Academic paper or report">
-    <label for="media3">Academic paper or report</label>
-    <br>
-    <input type="checkbox" id="media4" name="media4" value="Video">
-    <label for="media4">Video</label>
-    <br>
-    <input type="checkbox" id="media5" name="media5" value="Podcast">
-    <label for="media5">Podcast</label>
-    <br>
+    <!-- filter by media type -->
+    <section id="media-types">
+      <p>Platform/media type</p>
+      {% set media_types = ["Book", "Online course", "Academic paper or report", "Video", "Podcast"] %}
+      {% for i in range(media_types|length) %}
+        <input type="checkbox" id="media{{ i }}" name="media{{ i }}" value="{{ media_types[i] }}">
+        <label for="media{{ i }}">{{ media_types[i] }}</label>
+        <br>
+      {% endfor %}
+    </section>
+    <!-- filter by topic -->
+    <section id="topics">
+      <p>Topic</p>
+      {% set topics = [
+        "Machine Learning Algorithms", 
+        "AI Ethics", 
+        "Natural Language Processing (NLP)", 
+        "AI in Finance", 
+        "AI and Creativity"
+      ] %}
+      {% for i in range(topics|length) %}
+        <input type="checkbox" id="topic{{ i }}" name="topic{{ i }}" value="{{ topics[i] }}">
+        <label for="topic{{ i }}">{{ topics[i] }}</label>
+        <br>
+      {% endfor %}
+    </section>
     <button type="submit" onclick="applyFilters()">Apply filters</button>
   </aside>
 </div>
 
-<script>
-  let applyFilters = () => {
-    let filters = [];
-    let checkboxes = document.getElementsByTagName("input");
-    let sections = document.getElementsByTagName("section");
-
-    // go through checkboxes to figure out what to display
-    for (let checkbox of checkboxes) {
-      if (checkbox.checked) {
-        filters.push(checkbox.value);
-      }
-    }
-
-    // hide or display resources based on filters
-    for (let section of sections) {
-      let mediaType = section.children[1].children[3].innerHTML;
-      mediaType = mediaType.substring(28);
-
-      if (filters.includes(mediaType)) {
-        section.style.display = "grid";
-      } else {
-        section.style.display = "none";
-      }
-    }
-  }
-</script>
+<script src="{{ url_for('static', filename='scripts/resources.js') }}"></script>
 {% endblock %}
