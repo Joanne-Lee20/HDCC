@@ -13,7 +13,9 @@ html {
     border-style: solid;
     box-shadow: 0.5rem 0.5rem black;
 }
-
+p{
+    line-height: 1.6;
+}
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #F8F3F2;
