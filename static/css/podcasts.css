@@ -28,11 +28,47 @@ section.row {
   align-items: center;
   padding: 20px 0;
   gap: 40px;
+  background: linear-gradient(gray, gray) bottom no-repeat;
+  background-size: 50% 1px;
+}
+section.row button {
+  all: unset;
+  margin-bottom: 10px;
+}
+section.row button img {
+  width: 40px;
+}
+section.row:last-child {
+  background: none;
 }
 section.row .preview {
   text-align: right;
   max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 section.row .info {
   flex: 1;
+}
+
+#ytcontainer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 0 10px 10px;
+  background: white;
+  box-shadow: 0 0 10px gray;
+  display: none;
+}
+#ytcontainer div {
+  display: flex;
+  line-height: 1;
+}
+#ytcontainer span#spacer {
+  flex: 1;
+}
+#ytcontainer span#close {
+padding: 10px 5px;
+cursor: pointer;
 }
