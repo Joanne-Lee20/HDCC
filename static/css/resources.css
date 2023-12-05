@@ -1,23 +1,39 @@
 .container {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: 2.5rem;
   padding: 2rem;
 }
 
-section {
+.resource-section {
   display: grid;
+  gap: 1rem;
   padding-bottom: 2.5rem;
   grid-template-columns: 1fr 4fr;
+}
+
+.image {
+  display: flex;
+  align-items: center;
 }
 
 aside {
   background-color: #78c8d8;
   margin: 1rem 1rem 0 0;
   padding-left: 1.25rem;
-  max-height: 25rem;
+  max-height: 26rem;
 }
 
 button {
-  margin-top: 1rem;
+  background-color: black;
+  color: white;
+  float: right;
+  margin: 1rem 1rem 0 0;
+  padding: 0.5rem;
+  border: 1px white solid;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
 }
