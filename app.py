@@ -82,9 +82,18 @@ with open("static/resources.txt") as file:
     resources_content = [entry.split('\n') for entry in lines.split('\n\n')]
     resources_content = [entry for entry in resources_content if len(entry) != 1]
 
+images = {
+    "Book": "https://static.vecteezy.com/system/resources/previews/024/043/963/non_2x/book-icon-clipart-transparent-background-free-png.png",
+    "Online Course": "https://cdn-icons-png.flaticon.com/512/10650/10650916.png",
+    "Report": "https://www.pngitem.com/pimgs/m/320-3204575_reports-icon-png-transparent-png.png",
+    "Video": "https://cdn-icons-png.flaticon.com/512/4237/4237875.png",
+    "Website": "https://cdn-icons-png.flaticon.com/512/5044/5044729.png",
+    "Podcast": "https://cdn-icons-png.flaticon.com/512/2628/2628834.png"
+}
+
 @app.route('/resources')
 def resources():
-    return render_template("resources.html", resources_content = resources_content)
+    return render_template("resources.html", resources_content = resources_content, images = images)
 
 @app.route('/syllabus')
 def syllabus():
