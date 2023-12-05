@@ -17,9 +17,25 @@
     {% for i in range(resources_content|length) %}
     {% set resrc = resources_content[i] %}
     <section class="resource-section" id="resrc{{ i }}">
+      <!-- image (left) -->
       <article class="image">
-        <img src="{{ url_for('static', filename='media/resources/placeholder.png') }}" style="height: 85%"/>
+        {% if resrc[3] == 'Book' %}
+          <img src="{{ images['Book'] }}" alt="book icon" width="256" height="256"/>
+        {% elif resrc[3] == 'Online course' %}
+          <img src="{{ images['Online Course'] }}" alt="online course icon" width="256" height="256"/>
+        {% elif resrc[3] == 'Academic paper or report' %}
+          <img src="{{ images['Report'] }}" alt="report icon" width="256" height="128"/>
+        {% elif resrc[3] == 'Video' %}
+          <img src="{{ images['Video'] }}" alt="video icon" width="256" height="256"/>
+        {% elif resrc[3] == 'Website or blog' %}
+          <img src="{{ images['Website'] }}" alt="website icon" width="256" height="256"/>
+        {% elif resrc[3] == 'Podcast' %}
+          <img src="{{ images['Podcast'] }}" alt="podcast icon" width="252" height="250"/>
+        {% else %}
+          <img src="{{ url_for('static', filename='media/resources/placeholder.png') }}" style="height: 85%"/>
+        {% endif %}
       </article>
+      <!-- info (right) -->
       <article>
         <h3>{{ resrc[0] }}</h3>
         <p><b>Author(s):</b> {{ resrc[1] }}</p>
