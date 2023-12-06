@@ -19,29 +19,16 @@
     <section class="resource-section" id="resrc{{ i }}">
       <!-- image (left) -->
       <article class="image">
-        {% if resrc[3] == 'Book' %}
-          <img src="{{ images['Book'] }}" alt="book icon" width="256" height="256"/>
-        {% elif resrc[3] == 'Online course' %}
-          <img src="{{ images['Online Course'] }}" alt="online course icon" width="256" height="256"/>
-        {% elif resrc[3] == 'Academic paper or report' %}
-          <img src="{{ images['Report'] }}" alt="report icon" width="256" height="128"/>
-        {% elif resrc[3] == 'Video' %}
-          <img src="{{ images['Video'] }}" alt="video icon" width="256" height="256"/>
-        {% elif resrc[3] == 'Website or blog' %}
-          <img src="{{ images['Website'] }}" alt="website icon" width="256" height="256"/>
-        {% elif resrc[3] == 'Podcast' %}
-          <img src="{{ images['Podcast'] }}" alt="podcast icon" width="252" height="250"/>
-        {% else %}
-          <img src="{{ url_for('static', filename='media/resources/placeholder.png') }}" style="height: 85%"/>
-        {% endif %}
+        {% set curr_type = resrc['Platform/Media Type'] %}
+        <img src="{{ images[curr_type] }}" alt="{{ curr_type }} Icon" width="225rem" height="225rem">
       </article>
       <!-- info (right) -->
       <article>
-        <h3>{{ resrc[0] }}</h3>
-        <p><b>Author(s):</b> {{ resrc[1] }}</p>
-        <p><b>Description:</b> {{ resrc[2] }}</p>
-        <p><b>Platform/media type:</b> {{ resrc[3] }}</p>
-        <p><b>Topic:</b> {{ resrc[4] }}</p>
+        <h3>{{ resrc['Title'] }}</h3>
+        <p><b>Author(s):</b> {{ resrc['Author(s)'] }}</p>
+        <p><b>Description:</b> {{ resrc['Description'] }}</p>
+        <p><b>Platform/media type:</b> {{ resrc['Platform/Media Type'] }}</p>
+        <p><b>Topic:</b> {{ resrc['Topic'] }}</p>
       </article>
     </section>
     {% endfor %}
@@ -52,7 +39,6 @@
     <!-- filter by media type -->
     <section id="media-types">
       <p>Platform/media type</p>
-      {% set media_types = ["Book", "Online course", "Academic paper or report", "Video", "Podcast"] %}
       {% for i in range(media_types|length) %}
         <input type="checkbox" id="media{{ i }}" name="media{{ i }}" value="{{ media_types[i] }}">
         <label for="media{{ i }}">{{ media_types[i] }}</label>
@@ -62,13 +48,6 @@
     <!-- filter by topic -->
     <section id="topics">
       <p>Topic</p>
-      {% set topics = [
-        "Machine Learning Algorithms", 
-        "AI Ethics", 
-        "Natural Language Processing (NLP)", 
-        "AI in Finance", 
-        "AI and Creativity"
-      ] %}
       {% for i in range(topics|length) %}
         <input type="checkbox" id="topic{{ i }}" name="topic{{ i }}" value="{{ topics[i] }}">
         <label for="topic{{ i }}">{{ topics[i] }}</label>

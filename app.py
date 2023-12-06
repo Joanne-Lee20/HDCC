@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import csv
 
 app = Flask(__name__)
 
@@ -77,23 +78,33 @@ def research_papers():
     return render_template("research_papers.html", papers = research_papers_content)
 
 resources_content = []
-with open("static/resources.txt") as file:
-    lines = file.read()
-    resources_content = [entry.split('\n') for entry in lines.split('\n\n')]
-    resources_content = [entry for entry in resources_content if len(entry) != 1]
-
+media_types = set()
+topics = set()
 images = {
     "Book": "https://static.vecteezy.com/system/resources/previews/024/043/963/non_2x/book-icon-clipart-transparent-background-free-png.png",
-    "Online Course": "https://cdn-icons-png.flaticon.com/512/10650/10650916.png",
-    "Report": "https://www.pngitem.com/pimgs/m/320-3204575_reports-icon-png-transparent-png.png",
+    "Academic paper or report": "https://cdn-icons-png.flaticon.com/512/11469/11469020.png",
+    "Online course": "https://cdn-icons-png.flaticon.com/512/10650/10650916.png",
     "Video": "https://cdn-icons-png.flaticon.com/512/4237/4237875.png",
-    "Website": "https://cdn-icons-png.flaticon.com/512/5044/5044729.png",
-    "Podcast": "https://cdn-icons-png.flaticon.com/512/2628/2628834.png"
+    "Website or blog": "https://cdn-icons-png.flaticon.com/512/5044/5044729.png",
+    "Podcast": "https://cdn-icons-png.flaticon.com/512/2628/2628834.png",
+    "Online article": "https://cdn-icons-png.flaticon.com/512/4104/4104700.png",
+    "Organization": "https://cdn-icons-png.flaticon.com/512/2980/2980016.png",
+    "TED Talk": "https://cdn-icons-png.flaticon.com/512/3200/3200680.png"
 }
+
+with open("static/resources.csv") as file:
+    reader = csv.DictReader(file)
+    for line in reader:
+        resources_content.append(line)
+        media_types.add(line['Platform/Media Type'])
+        topics.add(line['Topic'])
+
+topics.remove("")
 
 @app.route('/resources')
 def resources():
-    return render_template("resources.html", resources_content = resources_content, images = images)
+    return render_template("resources.html", resources_content = resources_content, images = images,
+                           media_types = list(media_types), topics = list(topics))
 
 @app.route('/syllabus')
 def syllabus():
