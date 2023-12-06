@@ -126,3 +126,7 @@ nav a:hover, .selectblink {
     margin: 20px;
     padding: 5px;
   }
+
+#list {
+    line-height: 0;
+}
