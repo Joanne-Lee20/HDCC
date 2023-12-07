@@ -145,3 +145,49 @@ keyframes blink {
     animation-iteration-count: infinite;
     animation-timing-function: none;
 }
+
+#colorsquare1 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color:#ffa7a6;
+    width:30px;
+    height:30px;
+    color:#ffa7a6;
+    margin: 20px 5px;
+}
+#colorsquare2 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color:#ffdca6;
+    width:30px;
+    height:30px;
+    color:#ffdca6;
+    margin: 20px 5px;
+}
+#colorsquare3 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color:#97d8a0;
+    width:30px;
+    height:30px;
+    color:#97d8a0;
+    margin: 20px 5px;
+}
+#colorsquare4 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color:#78c8d8;
+    width:30px;
+    height:30px;
+    color:#78c8d8;
+    margin: 20px 5px;
+}
+#colorsquare5 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    background-color:#e4b0f4;
+    width:30px;
+    height:30px;
+    color:#e4b0f4;
+    margin: 20px 5px;
+}

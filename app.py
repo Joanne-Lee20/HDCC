@@ -72,7 +72,31 @@ research_papers_content = [
     ("advocacy", "AI Advocacy",           
         "author names here?", "love words that are directed towards people. some summary here",
         "https://example.com"),
-]
+    ("aesthetics", "AI Aesthetics",           
+        "author names here?", "love words that are directed towards people. some summary here",
+        "https://example.com"),
+    ("emotion", "AI Emotions and Sentiment",           
+        "author names here?", "love words that are directed towards people. some summary here",
+        "https://example.com"),
+    ("education", "AI Education",           
+        "author names here?", "love words that are directed towards people. some summary here",
+        "https://example.com"),
+    ("privacy", "AI Privacy and Cybersecurity",           
+        "author names here?", "love words that are directed towards people. some summary here",
+        "https://example.com"),
+    ("bias", "AI Bias and Discrimination",           
+        "author names here?", "love words that are directed towards people. some summary here",
+        "https://example.com"),
+    ("datasets", "AI Datasets",           
+        "author names here?", "love words that are directed towards people. some summary here",
+        "https://example.com"),
+    ("ethics", "AI Ethics",           
+        "author names here?", "love words that are directed towards people. some summary here",
+        "https://example.com"),
+    ("labor", "AI Labor",           
+        "author names here?", "love words that are directed towards people. some summary here",
+        "https://example.com"),]
+
 @app.route('/research_papers')
 def research_papers():
     return render_template("research_papers.html", papers = research_papers_content)
