@@ -6,7 +6,8 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/podcasts.css') }}">
 
 <div class="hero">
-  <h1>DCC Presents Cool Title Here.</h1>
+  <h2><strong>DCC PRESENTS...</strong></h2>
+  <br><h1>DCC X AI.</h1>
   <p>
     Conversations with our very own UMD faculty on AI's role in fields from art to education.
   </p>
@@ -19,7 +20,7 @@
   {% for episode in episodes %}
   <section class="row">
     <div class="info">
-      <span>episode {{ loop.index }}:</span>
+      <span>EPISODE {{ loop.index }}:</span>
       <h2>{{ episode[0] }}</h2>
       <p>{{ episode[1]|safe }}</p>
     </div>
