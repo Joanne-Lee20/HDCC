@@ -17,15 +17,18 @@
     {% for i in range(resources_content|length) %}
     {% set resrc = resources_content[i] %}
     <section class="resource-section" id="resrc{{ i }}">
+      <!-- image (left) -->
       <article class="image">
-        <img src="{{ url_for('static', filename='media/resources/placeholder.png') }}" style="height: 85%"/>
+        {% set curr_type = resrc['Platform/Media Type'] %}
+        <img src="{{ images[curr_type] }}" alt="{{ curr_type }} Icon" width="225rem" height="225rem">
       </article>
+      <!-- info (right) -->
       <article>
-        <h3>{{ resrc[0] }}</h3>
-        <p><b>Author(s):</b> {{ resrc[1] }}</p>
-        <p><b>Description:</b> {{ resrc[2] }}</p>
-        <p><b>Platform/media type:</b> {{ resrc[3] }}</p>
-        <p><b>Topic:</b> {{ resrc[4] }}</p>
+        <h3>{{ resrc['Title'] }}</h3>
+        <p><b>Author(s):</b> {{ resrc['Author(s)'] }}</p>
+        <p><b>Description:</b> {{ resrc['Description'] }}</p>
+        <p><b>Platform/media type:</b> {{ resrc['Platform/Media Type'] }}</p>
+        <p><b>Topic:</b> {{ resrc['Topic'] }}</p>
       </article>
     </section>
     {% endfor %}
@@ -36,7 +39,6 @@
     <!-- filter by media type -->
     <section id="media-types">
       <p>Platform/media type</p>
-      {% set media_types = ["Book", "Online course", "Academic paper or report", "Video", "Podcast"] %}
       {% for i in range(media_types|length) %}
         <input type="checkbox" id="media{{ i }}" name="media{{ i }}" value="{{ media_types[i] }}">
         <label for="media{{ i }}">{{ media_types[i] }}</label>
@@ -46,13 +48,6 @@
     <!-- filter by topic -->
     <section id="topics">
       <p>Topic</p>
-      {% set topics = [
-        "Machine Learning Algorithms", 
-        "AI Ethics", 
-        "Natural Language Processing (NLP)", 
-        "AI in Finance", 
-        "AI and Creativity"
-      ] %}
       {% for i in range(topics|length) %}
         <input type="checkbox" id="topic{{ i }}" name="topic{{ i }}" value="{{ topics[i] }}">
         <label for="topic{{ i }}">{{ topics[i] }}</label>

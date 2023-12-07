@@ -40,6 +40,9 @@ section.row button {
 section.row button img {
   width: 40px;
 }
+section.row button img:hover {
+  cursor: pointer;
+}
 section.row .preview {
   text-align: right;
   max-width: 50%;
