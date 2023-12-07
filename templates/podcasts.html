@@ -20,7 +20,7 @@
   {% for episode in episodes %}
   <section class="row">
     <div class="info">
-      <span>EPISODE {{ loop.index }}:</span>
+      <span>EPISODE {{ loop.index }}:</span><br><br>
       <h2>{{ episode[0] }}</h2>
       <p>{{ episode[1]|safe }}</p>
     </div>
@@ -28,9 +28,6 @@
       <button data-youtube="{{ episode[2] }}">
         <img src="{{ url_for('static', filename='media/play-50.png') }}" alt="Play"/>
       </button>
-      <span>
-        social links
-      </span>
     </div>
   </section>
   {% endfor %}
