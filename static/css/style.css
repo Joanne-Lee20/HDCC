@@ -123,10 +123,25 @@ nav a:hover, .selectblink {
     border-width: 1px;
     border-color: #F8F3F2;
     border-style: solid;
-    margin: 20px;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
+    border-radius:10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
   }
 
 #list {
     line-height: 0;
+}
+
+keyframes blink {
+    from {opacity:0};
+    to {opacity:1};
+}
+#blink {
+    animation: blink 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: none;
 }

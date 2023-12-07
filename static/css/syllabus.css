@@ -13,8 +13,8 @@ html {
     margin-bottom: 20px;
     border-width: 2px;
     border-color: black;
-    border-style: solid;
     box-shadow: 0.5rem 0.5rem black;
+    border-style: solid;
 }
 
 body {
@@ -25,10 +25,14 @@ body {
     padding: 0;
 }
 
+table {
+    max-width: 750px;
+    text-align: center;
+}
 table, th, td {
     margin: 0 auto;
     border: 2px solid;
 }
 th, td {
-    padding: 5px;
+    padding: 10px;
 }

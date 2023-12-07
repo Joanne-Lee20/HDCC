@@ -5,12 +5,12 @@
 {% block body %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/research_papers.css') }}">
 
-<div class="header">
-  <h1>AI RESEARCH PAPERS</h1>
+<header>
+  <h1>> AI RESEARCH PAPERS <span id="blink">|</span></h6></h1>
   <div id = "box2">
     <p>Teams of 6-8 students thoroughly researched a generative AI-related topic, created a 5-page report, and presented for 15-20 minutes in class. The goals were to improve understanding of generative AI, prepare for interviews with UMD experts, and start creating content for the Creative Workshop. The main objective was to identify excellent resources and compile a comprehensive repository of facts, perspectives, and arguments on generative AI. The research output also contributed to the collaboratively authored Glossary of Generative AI.</p>
   </div>
-</div>
+</header>
 
 <main>
   {% for paper in papers %}
