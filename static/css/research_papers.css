@@ -79,3 +79,39 @@ div.info {
 div.info p {
   flex: 1;
 }
+
+a { 
+  text-decoration: none;
+}
+button {
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  width: 10rem;
+  height: 3rem;
+  padding: 1.25rem 0;
+  margin: 1rem;
+  font-size: 15px;
+  background-color: (18, 12, 20);
+  color: #F8F3F2;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 15px;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+  background-color: #78c8d8;
+}
+
+.button-container a {
+  text-decoration: none;
+}
+
+button:hover {
+box-shadow: 0.5rem 0.5rem 0 black;
+transform: translate(-0.5rem, -0.5rem);
+color:black;
+}
+button:active {
+box-shadow: 0 0 0 black;
+transform: translate(0, 0);
+}
