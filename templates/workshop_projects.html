@@ -3,14 +3,6 @@
 {% block title %}Creative Workshop Projects{% endblock %}
 
 {% block body %}
-<header>
-  <h1>> CREATIVE WORKSHOP PROJECTS <span id="blink">|</span></h6></h1>
-  <p><span id="colorsquare1">.</span><span id="colorsquare2">.</span><span id="colorsquare3">.</span><span id="colorsquare4">.</span><span id="colorsquare5">.</span></p>
-  <div id = "box2">
-    <p>For six weeks, the classroom became a Creative Workshop, aiming to explore what can be created with generative AI tools. After podcast interviews, students refined and improved the content. Embracing an experimental approach, they used generative AI tools to create texts, images, music, and videos contributing to discussions on generative AI in both campus and public settings. Small groups proposed project plans, and students worked on two significant projects organized in "waves." The Creative Workshop's assessment involved a public work log, where students reported their daily activities and self-evaluated using a 5-point scale through a designated form.</p>
-  </div>
-</header>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +12,9 @@
             scroll-behavior: smooth;
         }
         .definition-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: left;
+            max-width: 250px;
+            margin: 20px;
+            text-align: center;
             padding: 20px;
             background-color: #F8F3F2;
             margin-bottom: 20px;
@@ -31,10 +23,11 @@
             border-style: solid;
             box-shadow: 0.5rem 0.5rem black;
         }
+
         header,nav,footer{
             width:100vw;
         }
-
+        
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #F8F3F2;
@@ -46,13 +39,6 @@
             justify-content:space-around;
         }
 
-        .box {
-            width: 300px;
-            margin: 20px;
-            padding: 15px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
         img {
             max-width: 100%;
             height: auto;
@@ -61,46 +47,109 @@
         h2 {
             color: #333;
         }
+        
+        a { 
+            text-decoration: none;
+        }
+        button {
+            font-family: 'Poppins', sans-serif;
+            width: 10rem;
+            height: 3rem;
+            padding: 1.25rem 0;
+            margin: 1rem;
+            font-size: 15px;
+            background-color: (18, 12, 20);
+            color: #F8F3F2;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            padding: 15px;
+            box-shadow: 0 0 0 black;
+            transition: all 0.2s;
+        }
+        .button1 {
+            background-color: #ffa7a6;
+        }
+        .button2 {
+            background-color: #ffdca6;
+        }
+        .button3 {
+            background-color: #97d8a0;
+        }
+        .button4 {
+            background-color: #78c8d8;
+        }
+        .button5 {
+            background-color: #e4b0f4;
+        }
+
+        .button-container a {
+            text-decoration: none;
+        }
+
+        button:hover {
+            box-shadow: 0.5rem 0.5rem 0 black;
+            transform: translate(-0.5rem, -0.5rem);
+            color:black;
+        }
+        button:active {
+            box-shadow: 0 0 0 black;
+            transform: translate(0, 0);
+        }
 
     </style>
 </head>
+<header>
+  <h1>> CREATIVE WORKSHOP PROJECTS <span id="blink">|</span></h6></h1>
+  <p><span id="colorsquare1">.</span><span id="colorsquare2">.</span><span id="colorsquare3">.</span><span id="colorsquare4">.</span><span id="colorsquare5">.</span></p>
+  <div id = "box2">
+    <p>For six weeks, the classroom became a Creative Workshop, aiming to explore what can be created with generative AI tools. After podcast interviews, students refined and improved the content. Embracing an experimental approach, they used generative AI tools to create texts, images, music, and videos contributing to discussions on generative AI in both campus and public settings. Small groups proposed project plans, and students worked on two significant projects organized in "waves." The Creative Workshop's assessment involved a public work log, where students reported their daily activities and self-evaluated using a 5-point scale through a designated form.</p>
+  </div>
+</header>
 <body>
 
-    <div class="box">
-        <img src="image1.jpg" alt="Image 1">
+    <article class="definition-container">
+        <img src="image2.jpg" alt="Image 2">
         <h2>Physical Art</h2>
         <p>Check out this woodwork guided by AI instruction.</p>
-    </div>
+        <a href="/about"><button class="button1">CLICK HERE</button></a>
+    </article>
 
-    <div class="box">
+    <article class="definition-container">
         <img src="image2.jpg" alt="Image 2">
         <h2>Music</h2>
         <p>Listen to these new genres created by AI.</p>
-    </div>
+        <a href="/about"><button class="button2">CLICK HERE</button></a>
+        
+    </article>
 
-    <div class="box">
+    <article class="definition-container">
         <img src="image3.jpg" alt="Image 3">
         <h2>DCC App</h2>
         <p>Have a look at the images of a future DCC app.</p>
-    </div>
+        <a href="/about"><button class="button3">CLICK HERE</button></a>
+    </article>
 
-    <div class="box">
+    <article class="definition-container">
         <img src="image4.jpg" alt="Image 4">
         <h2>DCC TikTok</h2>
         <p>Watch these videos to learn more about AI.</p>
-    </div>
+        <a href="/about"><button class="button4">CLICK HERE</button></a>
+    </article>
 
-    <div class="box">
+    <article class="definition-container">
         <img src="image5.jpg" alt="Image 5">
         <h2>Cooking</h2>
         <p>Spot the difference between AI and human-made recipes.</p>
-    </div>
+        <a href="/about"><button class="button5">CLICK HERE</button></a>
+    </article>
 
-    <div class="box">
+    <article class="definition-container">
         <img src="image6.jpg" alt="Image 6">
         <h2>Musical</h2>
         <p>Enjoy a musical choreographed and written by AI.</p>
-    </div>
+        <a href="/about"><button class="button1">CLICK HERE</button></a>
+    </article>
 
 </body>
 </main>

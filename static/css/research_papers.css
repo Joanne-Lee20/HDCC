@@ -85,7 +85,6 @@ a {
 }
 button {
   font-family: 'Poppins', sans-serif;
-  display: block;
   width: 10rem;
   height: 3rem;
   padding: 1.25rem 0;
@@ -100,10 +99,6 @@ button {
   box-shadow: 0 0 0 black;
   transition: all 0.2s;
   background-color: #78c8d8;
-}
-
-.button-container a {
-  text-decoration: none;
 }
 
 button:hover {
