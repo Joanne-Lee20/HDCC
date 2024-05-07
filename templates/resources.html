@@ -27,9 +27,9 @@
       <article>
         <h3>{{ resrc['Title'] }}</h3>
         <p><b>Author(s):</b> {{ resrc['Author(s)'] }}</p>
-        <p><b>Description:</b> {{ resrc['Description'] }}</p>
+        <p><b>Description:</b> {{ resrc['Description'] if resrc['Description'] else 'N/A' }}</p>
         <p><b>Platform/media type:</b> {{ resrc['Platform/Media Type'] }}</p>
-        <p><b>Topic:</b> {{ resrc['Topic'] }}</p>
+        <p><b>Topic:</b> {{ resrc['Topic'] if resrc['Topic'] else 'N/A' }}</p>
       </article>
     </section>
     {% endfor %}

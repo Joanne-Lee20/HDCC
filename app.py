@@ -145,4 +145,4 @@ def workshop_projects():
     return render_template("workshop_projects.html")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
